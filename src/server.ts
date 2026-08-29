@@ -21,7 +21,7 @@ const MONGO_URI = process.env.MONGO_URI as string;
 
 mongoose
     .connect(MONGO_URI)
-    .then(()=> console.log("Mongese Connected"))
+    .then(()=> console.log("Mongese Connected", MONGO_URI))
     .catch((err)=> console.log("MongoDB Connection Error: ", err))
 
 app.get("/", (req, res) => {
